@@ -1,0 +1,111 @@
+body
+{font-family:Tahoma,sans-serif!important;}
+/*поле поиска: цвет фона сделан более светлым*/
+#container.ytd-searchbox  {
+  background-color:#2c2c2c;
+}
+/*верхняя панель: затемнена*/ 
+#container.ytd-masthead {
+  background-color:#171717
+}
+
+/*верхняя панель: сдвинута вверх*/
+#container.ytd-masthead {
+    height: 44px;
+}
+/*Кнопка бокового меню: уменьшена*/
+#guide-icon {
+  height:20px;
+}
+/*верхняя панель: отступы слева и справа уменьшены для корректного отображения кнопки меню*/
+#container.ytd-masthead {
+    padding: 0 6px;
+}
+a.ytd-mini-guide-entry-renderer {
+    width: 50px;
+}
+
+/*Левая панель: уменьшение иконки, уменьшение отступа после иконки (1е - это все иконки для авторизованных пользователей, 2е - категория "Лучшее на ютубе")*/
+.guide-icon.ytd-guide-entry-renderer, 
+yt-img-shadow.ytd-guide-entry-renderer.no-transition
+ {
+    --iron-icon-height: 20px;
+    --iron-icon-width: 20px;
+    margin-right: 10px;
+}
+
+/*левая панель: уменьшение отступов слева*/
+paper-item.ytd-guide-entry-renderer {
+    padding: 0 14px;
+}
+
+/*левая панель: уменьшение отступов слева для подзаголовков ("ПОДПИСКИ", "ДРУГИЕ ВОЗМОЖНОСТИ")*/
+yt-formatted-string#guide-section-title.style-scope.ytd-guide-section-renderer {
+  padding: 8px 14px;
+}
+
+/*левая панель: устранение полосы над пунктом "Главная" и других лишних отступов между подпунктами*/
+#sections.ytd-guide-renderer > *.ytd-guide-renderer:first-child {
+    padding: 0px 0px 6px 0px ;
+}
+
+/*левая панель: уменьшение высоты пунктов меню*/
+ytd-guide-section-renderer {
+    --paper-item-min-height: 34px;
+}
+
+/*Левая понель: неудачная попытка увеличить аватары каналов*/
+/*img#img.style-scope.yt-img-shadow {
+  height:24!important;
+}*/
+
+/*Левая понель: Удаление футера*/
+#guide-links-primary.ytd-guide-renderer,
+#guide-links-secondary.ytd-guide-renderer,#footer.ytd-guide-renderer,
+#copyright {display:none}
+
+/*Главная: исправление отступа справа в названии видео*/
+#meta.ytd-rich-grid-video-renderer {
+    padding-right: 14px;
+}
+
+/*Главная: исправление отступа от аватара*/
+#avatar-link.ytd-rich-grid-video-renderer {
+    margin-right: 6px;
+}
+
+/*Главная: уменьшение отступа сверху от заголовка раздела ("Рекомендованные", "Новости Youtube")*/
+#grid-title.ytd-rich-grid-renderer {
+    margin-top: 0px;
+  /*Зависит от манипуляций с верхней панелью. Если таковые были убраны, то сдесь надо поставить 12px*/
+}
+
+/*Главная: уменьшение отступа слева и справа от блока с видео*/
+ytd-rich-grid-renderer {
+    margin: 0 12px 0 12px;
+}
+
+/*Главная: уменьшение отступа сверху от блока с видео*/
+#contents.ytd-rich-grid-renderer {
+    margin-top: 12px;
+}
+
+/*типа H2 (потом распишу)*/
+#rich-shelf-header.ytd-rich-shelf-renderer {
+    margin: 16px 0 16px 4px;
+}
+
+/*////////////////////
+Страница воспроизведения
+////////////////////*/
+div#primary.style-scope.ytd-watch-flexy {
+  padding-top:0;margin-top:0!important;
+}
+/*Название канала*/
+  a.yt-simple-endpoint.style-scope.yt-formatted-string {
+    font-size:;
+  }
+
+ytd-item-section-renderer#sections.style-scope.ytd-comments {
+  display:none;
+}
